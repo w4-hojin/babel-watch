@@ -11,6 +11,7 @@ const util = require('util');
 const fork = require('child_process').fork;
 const execSync = require('child_process').execSync;
 const commander = require('commander');
+const _ = require('lodash');
 
 const RESTART_COMMAND = 'rs';
 
