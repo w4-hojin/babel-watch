@@ -34,11 +34,14 @@ function regexify(val) {
  
 function arrayify(val) {
   if (!val) return [];
-  if (_.isString(val)) return exports.list(val);
+  if (_.isString(val)) return list(val);
   if (_.isArray(val)) return val;
   throw new TypeError("illegal type for arrayify");
 };
 
+function list(val) {
+  return val ? val.split(",") : [];
+};
 
 program.option('-d, --debug [port]', 'Set debugger port')
 program.option('-B, --debug-brk', 'Enable debug break mode')
