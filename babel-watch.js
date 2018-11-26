@@ -2,6 +2,7 @@
 
 'use strict';
 
+const _ = require('lodash');
 const chokidar = require('chokidar');
 const path = require('path');
 const babel = require('@babel/core');
